@@ -7,15 +7,14 @@ var PlayerView = Backbone.View.extend({
 
   events: {
     'ended': function() {
+      console.log('inside ended');
       this.model.ended();
-    },
-
-    'pause': function() {
-      console.log("play paused");
+      this.render();
     }
   },
 
   initialize: function() {
+    this.render();
   },
 
   setSong: function(song){
@@ -24,7 +23,14 @@ var PlayerView = Backbone.View.extend({
   },
 
   render: function(){
-    return this.$el.attr('src', this.model ? this.model.get('url') : '');
+    if (this.model !== undefined) {
+      var url = this.model ? this.model.get('url') : '';
+      return this.$el.attr('src', url).after($('<div class="playing-song">' + this.model.get('title') + '</div>'));
+
+    } else {
+      console.log('here');
+      return $('.playing-song').text('');
+    }
   }
 
 });

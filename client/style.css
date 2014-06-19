@@ -1,0 +1,73 @@
+
+body {
+  background: #FFFAD5;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+
+
+.container {
+  margin: 0 auto;
+  padding: 40px;
+  max-width: 50em;
+}
+
+.library {
+  float: left;
+  background: #105B63;
+  width:45%;
+  padding: 2.5%;
+  border-radius: 3px;
+  color: #8ECCCA;
+  height: 630px;
+}
+
+.right {
+  float: right;
+  width:45%;
+  padding: 0 2.5%;
+}
+
+.audio-container {
+  background: #FFD34E;
+  border-radius: 3px;
+}
+
+audio {
+  border-radius: 5px;
+  margin: 30px;
+}
+
+.playing-song {
+  text-align: center;
+  padding-bottom: 10px;
+
+}
+
+.queue-container {
+  margin-top: 20px;
+  background: #BD4932;
+  border-radius: 3px;
+  padding: 2.5%;
+  height: 500px;
+}
+
+
+
+
+.queue-entry {
+  margin-top: 10px;
+}
+.dequeue:hover {
+  background: #999;
+}
+
+.dequeue {
+  padding: 0 10px;
+  background: #ccc;
+  border-radius: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+
