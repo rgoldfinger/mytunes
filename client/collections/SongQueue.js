@@ -18,22 +18,9 @@ var SongQueue = Songs.extend({
       }
       // add model to queue
       // console.log(modelObject);
-
       // if no song playing, play first song
-
     });
-    this.on('ended', function(modelObject) {
-      // debugger;
-      console.log(modelObject);
-      if (modelObject !== undefined) {
-        this.remove(modelObject);
-      }
-        this.playFirst();
 
-
-      // if no song playing, play first song
-
-    });
   },
 
   playFirst: function() {
@@ -41,12 +28,5 @@ var SongQueue = Songs.extend({
       this.models[0].play();
     }
   },
-
-
-
-  // endSong: function() {
-  //   this.models.shift();
-  //   this.playFirst();
-  // },
 
 });
