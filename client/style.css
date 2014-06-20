@@ -4,7 +4,9 @@ body {
   font-family: 'Droid Sans', sans-serif;
 }
 
-
+h2 {
+  margin: 0;
+}
 
 .container {
   margin: 0 auto;
@@ -21,6 +23,26 @@ body {
   color: #8ECCCA;
   height: 630px;
 }
+
+.library-entry {
+  margin-top: 10px;
+}
+
+.enqueue {
+  float: right;
+  padding: 0 10px;
+  background: #ccc;
+  border-radius: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  color: black;
+}
+
+.dequeue:hover, .enqueue:hover, .up-queue:hover, .down-queue:hover {
+  background: #999;
+}
+
+
 
 .right {
   float: right;
@@ -53,21 +75,30 @@ audio {
 }
 
 
-
-
 .queue-entry {
   margin-top: 10px;
 }
-.dequeue:hover {
-  background: #999;
-}
 
-.dequeue {
+/*.dequeue {
   padding: 0 10px;
   background: #ccc;
   border-radius: 10px;
   margin-right: 5px;
   cursor: pointer;
 }
+*/
+
+.up-queue, .down-queue, .dequeue {
+  background: #ccc;
+  border-radius: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  padding: 1px 10px;
+}
+
+.queue-buttons {
+  float: right;
+}
+
 
 

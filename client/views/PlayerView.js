@@ -7,9 +7,8 @@ var PlayerView = Backbone.View.extend({
 
   events: {
     'ended': function() {
-      console.log('inside ended');
+      $('.playing-song').text('');
       this.model.ended();
-      this.render();
     }
   },
 
@@ -25,11 +24,8 @@ var PlayerView = Backbone.View.extend({
   render: function(){
     if (this.model !== undefined) {
       var url = this.model ? this.model.get('url') : '';
-      return this.$el.attr('src', url).after($('<div class="playing-song">' + this.model.get('title') + '</div>'));
+      return this.$el.attr('src', url).after($('<div class="playing-song">' + this.model.get('artist') + ' &ndash; ' + this.model.get('title') + '</div>'));
 
-    } else {
-      console.log('here');
-      return $('.playing-song').text('');
     }
   }
 

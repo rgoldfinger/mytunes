@@ -3,16 +3,24 @@ var SongQueueEntryView = Backbone.View.extend({
   tagName: 'div',
   className: 'queue-entry',
 
-  template: _.template('<span class="dequeue">X</span>'
-        + '<span>(<%= artist %>)</span>'
+  template: _.template('<span><%= artist %> &ndash; </span>'
         + '<span><%= title %></span>'
-        // + '<span><button class="dequeue">^</button></span>'
-        // + '<span><button class="dequeue">X</button></span>'
+        + '<span class="queue-buttons">'
+        + '<span class="fa fa-chevron-up up-queue"></span>'
+        + '<span class="fa fa-chevron-down down-queue"></span>'
+        + '<span class="fa fa-minus dequeue"></span>'
+        + '</span>'
         ),
 
   events: {
     'click .dequeue': function() {
       this.model.dequeue();
+    },
+    'click .up-queue': function() {
+      this.model.upQueue();
+    },
+    'click .down-queue': function() {
+      this.model.downQueue();
     }
   },
 

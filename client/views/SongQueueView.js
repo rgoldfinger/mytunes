@@ -20,9 +20,7 @@ var SongQueueView = Backbone.View.extend({
     // see http://api.jquery.com/detach/
     this.$el.children().detach();
 
-// don't display current playing song?
-// ---- -- - - - - - -- - - - -- - -
-    this.$el.html('<div>Queue</div>').append(
+    this.$el.html('<h2>Queue</h2>').append(
       this.collection.map(function(song, index){
         if (index !== 0) {
           return new SongQueueEntryView({model: song}).render();
